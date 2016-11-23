@@ -47,8 +47,8 @@
         <table align="center" style="border-spacing:0;color:#333333;width:100%;">
                 <tr> <!-- background:#000 -->
                     <td style="background:white;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center">
-                        <a title="Интернет-магазин {{shopName}}" href="{{shopUrl}}" style="color:#337ff1">
-                            <img width="150px" src="{{shopUrl}}/images/logo-black.png" alt="Интернет-магазин {{shopName}}" />
+                        <a title="Store {{shopName}}" href="{{shopUrl}}" style="color:#337ff1">
+                            <img width="150px" src="{{shopUrl}}/images/logo-black.png" alt="Store {{shopName}}" />
                         </a>
                     </td>
                 </tr>
@@ -60,8 +60,8 @@
                         <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
                             <tr>
                                 <td class="inner contents" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;width:100%;text-align:center;">
-                                    <p class="h1" style="Margin:0;font-weight:600;letter-spacing: -1px;font-size:24px;Margin-bottom:10px;">Благодарим вас за покупки!</p>
-                                    <p style="Margin:0;font-weight:100;font-size:22px;letter-spacing: -1px;font-style:italic;Margin-bottom:10px;">Ваш заказ подтвержден</p>
+                                    <p class="h1" style="Margin:0;font-weight:600;letter-spacing: -1px;font-size:24px;Margin-bottom:10px;">Thank you for your purchase!</p>
+                                    <p style="Margin:0;font-weight:100;font-size:22px;letter-spacing: -1px;font-style:italic;Margin-bottom:10px;">Your order is confirmed</p>
                                 </td>
                             </tr>
                         </table>
@@ -99,7 +99,7 @@
                                     <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
                                         <tr>
                                             <td class="text align-right" style="width:180px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                <b>Заказ №{{number}}</b>
+                                                <b>Order #{{number}}</b>
                                             </td>
                                         </tr>
                                         <tr>
@@ -126,12 +126,12 @@
                                         <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
                                             <tr><td><span>{{this.product.manufacturer_name}}</span></td></tr>
                                             <tr><td><span>{{this.product.name}}</span></td></tr>
-                                            <tr><td><span>РАЗМЕР ОБУВИ: {{this.variant.name}}</span></td></tr>
-                                            <tr><td><span>МОДЕЛЬ: {{this.product.sku}}</span></td></tr>
+                                            <tr><td><span>Size: {{this.variant.name}}</span></td></tr>
+                                            <tr><td><span>Sku: {{this.product.sku}}</span></td></tr>
                                         </table>
                                     </td>
                                     <td style="width:20%;">
-                                        {{this.price}} руб
+                                        {{this.price}} $
                                     </td>
                                 </tr>
                             {{/each}}
@@ -144,7 +144,7 @@
                         <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
                             <tr>
                                 <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
-                                    <p class="text" style="Margin:0;font-size:16px;">Товары:</p>
+                                    <p class="text" style="Margin:0;font-size:16px;">Products:</p>
                                 </td>
                                 <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
                                     <p class="text" style="Margin:0;font-size:16px;">{{sub_total}}</p>
@@ -152,7 +152,7 @@
                             </tr>
                             <tr>
                                 <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
-                                    <p class="text" style="Margin:0;font-size:16px;">Доставка:</p>
+                                    <p class="text" style="Margin:0;font-size:16px;">Delivery:</p>
                                 </td>
                                 <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
                                     <p class="text" style="Margin:0;font-size:16px;">{{shipment_price}}</p>
@@ -160,7 +160,7 @@
                             </tr>
                             <tr>
                                 <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
-                                    <p class="text" style="Margin:0;font-size:16px;font-weight:bold;">Итого, к оплате:</p>
+                                    <p class="text" style="Margin:0;font-size:16px;font-weight:bold;">Total:</p>
                                 </td>
                                 <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
                                     <p class="text" style="Margin:0;font-size:16px;font-weight:bold;">{{grand_total}}</p>

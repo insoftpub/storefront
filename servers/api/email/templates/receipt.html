@@ -55,12 +55,12 @@
                         <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
                             <tr>
                                 <td class="inner contents" style="padding-top:10px;padding-right:10px;padding-left:10px;width:100%;text-align:left;">
-                                    <p style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;"><font class="colored">Счет №</font> {{number}}</p>
+                                    <p style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;"><font class="colored">Invoice #</font> {{number}}</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="inner contents" style="padding-right:10px;padding-left:10px;width:100%;text-align:left;">
-                                    <p style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;"><font class="colored">Дата</font> {{date_created}}</p>
+                                    <p style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;"><font class="colored">Date</font> {{date_created}}</p>
                                 </td>
                             </tr>
                         </table>
@@ -71,7 +71,7 @@
                         <table class="column" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;display:inline-block;vertical-align:top;">
                             <tr>
                                 <td class="inner contents" style="padding-right:10px;padding-left:10px;width:100%;text-align:left;">
-                                    <p class="colored" style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;">Получатель</p>
+                                    <p class="colored" style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;">Recipient</p>
                                 </td>
                             </tr>
                             <tr>
@@ -91,12 +91,12 @@
                                         </tr>
                                         <tr>
                                             <td class="inner contents" style="padding-right:10px;padding-top:10px;width:100%;text-align:left;">
-                                                <p class="text" style="Margin:0">Доставка</p>
+                                                <p class="text" style="Margin:0">Delivery</p>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="inner contents" style="padding-right:10px;width:100%;text-align:left;">
-                                                <p class="colored" style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600">Комментарий покупателя</p>
+                                                <p class="colored" style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600">Comments</p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -116,19 +116,19 @@
                         <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
                             <tr>
                                 <td style="width:30%;border-bottom:solid 2px #649ed4;">
-                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Изображение</p>
+                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Image</p>
                                 </td>
                                 <td style="width:25%;border-bottom:solid 2px #649ed4;">
-                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Наименование и бренд</p>
+                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Name and brand</p>
                                 </td>
                                 <td style="width:25%;border-bottom:solid 2px #649ed4;">
-                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Артикул</p>
+                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Sku</p>
                                 </td>
                                 <td style="width:10%;border-bottom:solid 2px #649ed4;">
-                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Размер</p>
+                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Size</p>
                                 </td>
                                 <td style="width:10%;border-bottom:solid 2px #649ed4;">
-                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Цена, руб</p>
+                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Price, $</p>
                                 </td>
                             </tr>
                             {{#each products}}
@@ -154,7 +154,7 @@
                             </tr>
                             {{/each}}
                             <tr>
-                                <td style="width:30%;border-bottom:solid 3px #649ed4;">Доставка курьером</td>
+                                <td style="width:30%;border-bottom:solid 3px #649ed4;">Courier delivery</td>
                                 <td style="width:25%;border-bottom:solid 3px #649ed4;">-</td>
                                 <td style="width:25%;border-bottom:solid 3px #649ed4;">-</td>
                                 <td style="width:10%;border-bottom:solid 3px #649ed4;">-</td>
@@ -162,7 +162,7 @@
                             </tr>
                             <tr>
                                 <td style="width:90%;border-bottom:solid 1px #649ed4;" colspan="4">
-                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Всего к оплате</p>
+                                    <p class="colored" style="Margin:0;font-size:14px;font-weight:600;padding: 5px 0;">Total</p>
                                 </td>
                                 <td style="width:10%;border-bottom:solid 1px #649ed4;">{{grand_total}}</td>
                             </tr>
