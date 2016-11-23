@@ -1,0 +1,82 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/typography.scss';
+
+.root {
+    padding: 10px 0;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.inner {
+    height: calc(100vh - 20px);
+    overflow: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.header {
+    padding: 20px;
+}
+
+.links {
+    padding: 0 20px;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.link {
+    @extend .unselectable;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+}
+
+.linkWrapper {
+    display: block;
+    flex-shrink: 0;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    min-height: 50px;
+    justify-content: space-between;
+    line-height: 45px;
+    background-color: $white-color;
+}
+
+.footerLink {
+    @extend .unselectable;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 0 20px;
+}
+
+
+.homeLink {
+    @extend .unselectable;
+    position: absolute;
+    left: 0;
+}
+
+.accountLink {
+    @extend .unselectable;
+    position: absolute;
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}

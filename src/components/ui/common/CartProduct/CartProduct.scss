@@ -1,0 +1,48 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    padding: 5px;
+}
+
+.content {
+    @extend .flex-row;
+}
+
+.image {
+    flex: 2 0 0;
+    border: 0.5px solid $black-color;
+}
+
+.text {
+    flex: 3 0 0;
+    font-size: 12px;
+    margin-left: 25px;
+    margin-right: 5px;
+}
+
+.price,
+.variant,
+.name {
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.price {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.removeAction {
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.quantity {
+    margin-top: 5px;
+}

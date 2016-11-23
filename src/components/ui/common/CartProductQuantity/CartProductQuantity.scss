@@ -1,0 +1,55 @@
+@import '../../../styles/common';
+@import '../../../styles/extends/flex';
+@import '../../../styles/extends/typography';
+
+.root {
+    @extend .flex-column;
+    font-weight: 400;
+    flex: 2 0 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.inStock,
+.outStock {
+    @extend .unselectable;
+    display: inline;
+    font-size: 9px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: $white-color;
+    max-width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inStock {
+    background-color: $light-green-color;
+}
+
+.outStock {
+    background-color: $red-color;
+}
+
+.controls {
+    @extend .flex-row;
+    justify-content: center;
+    align-items: center;
+
+    &:hover .control {
+        display: block;
+    }
+}
+
+.quantity {
+    @extend .unselectable;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.control {
+    @media #{$media-desktop} {
+        display: none;
+    }
+}

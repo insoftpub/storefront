@@ -1,0 +1,17 @@
+@import '../../../styles/common.scss';
+
+.filter {
+    flex: 0 0 180px;
+
+    @media #{$media-mobile} {
+        display: none;
+    }
+
+    @media #{$media-desktop-large} {
+        flex: 0 0 230px;
+    }
+}
+
+.content {
+    width: 100%;
+}

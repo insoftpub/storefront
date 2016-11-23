@@ -1,0 +1,125 @@
+@import '../../styles/variables/colors.scss';
+@import '../../styles/variables/media.scss';
+
+* {
+    margin: 0;
+    line-height: 1.2;
+}
+
+html {
+    display: table;
+    width: 100%;
+    height: 100%;
+    color: $gray-color;
+    font-family: dosis, sans-serif;
+}
+
+body {
+    display: table-cell;
+    margin: 2em auto;
+    vertical-align: middle;
+}
+
+h1, h2 {
+    color: $gray-dark-color;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+
+    @media #{$media-phone} {
+        font-size: 4em;
+    }
+
+    @media #{$media-phone-little} {
+        font-size: 3em;
+    }
+
+    @media #{$media-phone-minimum} {
+        font-size: 2em;
+    }
+}
+
+h2 {
+    font-size: 4.5em;
+    margin: 0 0 0.5em;
+
+    @media #{$media-phone} {
+        font-size: 3.7em;
+        margin-bottom: 0.4em;
+    }
+
+    @media #{$media-phone-little} {
+        font-size: 2.8em;
+    }
+
+    @media #{$media-phone-minimum} {
+        font-size: 2em;
+        margin: 0 0 0.3em;
+    }
+}
+
+p {
+    margin: 0 auto;
+    font-size: 2em;
+
+    @media #{$media-phone} {
+        font-size: 1.5em;
+    }
+
+    @media #{$media-phone-little} {
+        font-size: 1.3em;
+    }
+
+    @media #{$media-phone-minimum} {
+        font-size: 1em;
+    }
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+
+    @media #{$media-phone} {
+        max-width: 440px;
+    }
+
+    @media #{$media-phone-little} {
+        max-width: 320px;
+    }
+
+    @media #{$media-phone-minimum} {
+        max-width: 220px;
+    }
+}
+
+.link {
+    font-weight: 500;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+}
+
+.linkWrapper {
+    margin-right: 0.7em;
+    display: flex;
+}
+
+.linksWrapper {
+    margin-top: 0.67em;
+    display: flex;
+}
+
+.linkIconWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 0.15em;
+}
+
+.linkIcon {
+    width: 0.9em !important;
+    height: 0.9em !important;
+}

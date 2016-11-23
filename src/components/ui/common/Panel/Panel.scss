@@ -1,0 +1,41 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography.scss';
+
+.root {
+    font-weight: 300;
+}
+
+.title {
+    @extend  .unselectable;
+    @extend .flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.flexible {
+    display: flex;
+    flex-shrink: 1;
+    flex-basis: 0;
+
+    @extend .flex-column;
+}
+
+.header {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.panelContent {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.collapsible {
+    overflow: hidden;
+}

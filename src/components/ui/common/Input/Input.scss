@@ -1,0 +1,99 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography.scss';
+@import '../../../styles/mixins/placeholder.scss';
+
+.root {
+    @extend .flex-column;
+
+    #inner-editor {
+        overflow: visible;
+        height: 33px;
+    }
+}
+
+.wide {
+    @extend .flex-wide-element;
+
+    .input {
+        @extend .flex-wide-element;
+    }
+}
+
+.leftLabelPosition {
+    @extend .flex-row;
+    align-items: center;
+}
+
+.rightLabelPosition {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.label {
+    @extend .unselectable;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hasOffset {
+    width: 30%;
+}
+
+.input {
+    font-size: inherit;
+    letter-spacing: 1px;
+    font-weight: 400;
+    height: 33px;
+    border: none;
+    border-bottom: 1px solid $black-color;
+    color: $black-color;
+    background-color: $white-color;
+    padding: 0 7px;
+
+    &:focus,
+    &:active,
+    &:hover {
+        outline: none;
+    }
+
+    &:disabled {
+        background-color: $gray-extra-light-color;
+        border: 1px solid transparent;
+    }
+
+    @include placeholder {
+        color: $gray-color;
+        font-weight: 300;
+    }
+}
+
+.blackFrame {
+    border: 1px solid $black-color;
+    border-radius: 0;
+}
+
+.redFrame {
+    border: 1px solid $red-color;
+    border-radius: 0;
+}
+
+.spanStyle {
+    border: none;
+    background-color: transparent;
+    cursor: default;
+}
+
+.message {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.error {
+    color: $red-color;
+}
+
+.controls {
+    @extend .flex-column;
+    flex: 1;
+}

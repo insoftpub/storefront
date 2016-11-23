@@ -1,0 +1,22 @@
+@import '../../../styles/common.scss';
+
+.wrapper {
+    margin-bottom: 30px;
+}
+
+.thirdPartyAuth {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-color;
+}
+
+.separator {
+    margin-top: -7px;
+}
+
+.or {
+    padding: 0 5px;
+    background-color: $white-color;
+}

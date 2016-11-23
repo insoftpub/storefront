@@ -1,0 +1,16 @@
+$media-phone-minimum: 'screen and (max-width: 320px)';
+$media-phone-little: 'screen and (max-width: 480px)';
+$media-phone: 'screen and (max-width: 540px)';
+
+$media-tablets: 'screen and (min-width: 541px)';
+$media-mobile: "screen and (max-width: 999px)";
+
+$media-desktop: 'screen and (min-width: 1000px)';
+$media-desktop-large: 'screen and (min-width: 1170px)';
+$media-desktop-dambo: 'screen and (min-width: 1480px)';
+$media-desktop-extra-large: 'screen and (min-width: 1786px)';
+$media-desktop-gigant: 'screen and (min-width: 2560px)';
+
+$media-retina: '(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi)';
+

@@ -1,0 +1,6 @@
+{
+    "name": "CollapsibleLink",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./CollapsibleLink.jsx"
+}

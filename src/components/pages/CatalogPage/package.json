@@ -1,0 +1,6 @@
+{
+  "name": "CatalogPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CatalogPage.jsx"
+}

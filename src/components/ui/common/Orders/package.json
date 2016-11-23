@@ -1,0 +1,6 @@
+{
+    "name": "Orders",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./Orders.jsx"
+}

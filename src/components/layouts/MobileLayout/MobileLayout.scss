@@ -1,0 +1,40 @@
+@import '../../styles/common.scss';
+
+.root {}
+
+.navigation {
+    @media #{$media-phone} {
+        width: 100vw;
+    }
+
+    @media #{$media-tablets} {
+        width: 360px;
+    }
+}
+
+.mask {
+    z-index: 9;
+}
+
+.header {
+    z-index: 8;
+
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hasTopPadding {
+    padding-top: $mobile-header-height;
+}
+
+.slider {
+    z-index: 10;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}

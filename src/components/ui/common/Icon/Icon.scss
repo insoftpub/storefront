@@ -1,0 +1,11 @@
+@import '../../../styles/common.scss';
+
+.clickable {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.4s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,257 @@
+{
+    "extends": "react",
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "jest": true
+    },
+    "rules": {
+        "one-var": [
+            2,
+            "always"
+        ],
+        "max-len": 0,
+        "dot-location": [
+            2,
+            "property"
+        ],
+        "operator-linebreak": [
+            2,
+            "before",
+            {
+                "overrides": {
+                    ">": "before",
+                    ">=": "before",
+                    "<": "before",
+                    "<=": "before",
+                    "||": "before",
+                    "&&": "before",
+                    "+": "before",
+                    "-": "before"
+                }
+            }
+        ],
+        "padded-blocks": [
+            2,
+            "never"
+        ],
+        "space-before-function-paren": [
+            2,
+            "never"
+        ],
+        "radix": 1,
+        "prefer-const": 1,
+        "prefer-reflect": 0,
+        "prefer-spread": 2,
+        "no-param-reassign": [
+            2,
+            {
+                "props": false
+            }
+        ],
+        "object-shorthand": [
+            2,
+            "always"
+        ],
+        "no-console": 2,
+        "no-with": 2,
+        "no-magic-numbers": 2,
+        "no-mixed-spaces-and-tabs": 2,
+        "no-multiple-empty-lines": 2,
+        "no-multi-spaces": 2,
+        "indent": [
+            2,
+            4
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "lines-around-comment": [
+            2,
+            {
+                "beforeBlockComment": true,
+                "afterBlockComment": false
+            }
+        ],
+        "curly": [
+            2,
+            "all"
+        ],
+        "comma-dangle": [
+            2,
+            "never"
+        ],
+        "brace-style": 2,
+        "space-infix-ops": [
+            2,
+            {
+                "int32Hint": false
+            }
+        ],
+        "space-unary-ops": 2,
+        "space-after-keywords": 2,
+        "spaced-comment": [
+            2,
+            "always",
+            {
+                "exceptions": [
+                    "-",
+                    "+"
+                ]
+            }
+        ],
+        "func-style": [
+            2,
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "newline-after-var": [
+            2,
+            "always"
+        ],
+        "new-cap": [
+            2,
+            {
+                "capIsNewExceptions": [
+                    "Nothing"
+                ]
+            }
+        ],
+        "no-unused-expressions": [
+            2,
+            {
+                "allowShortCircuit": true,
+                "allowTernary": true
+            }
+        ],
+        "no-underscore-dangle": [
+            2,
+            {
+                "allow": [
+                    "_exception",
+                    "__html"
+                ]
+            }
+        ],
+        "arrow-parens": [
+            2,
+            "as-needed"
+        ],
+        "react/prop-types": 1,
+        "react/jsx-indent-props": [
+            2,
+            4
+        ],
+        "react/no-string-refs": 1,
+        "react/self-closing-comp": [
+            2,
+            {
+                "component": true,
+                "html": false
+            }
+        ],
+        "react/no-multi-comp": [
+            1,
+            {
+                "ignoreStateless": true
+            }
+        ],
+        "react/prefer-es6-class": [
+            1,
+            "always"
+        ],
+        "react/jsx-pascal-case": 2,
+        "react/jsx-closing-bracket-location": [
+            2,
+            {
+                "selfClosing": "line-aligned",
+                "nonEmpty": "line-aligned"
+            }
+        ],
+        "react/jsx-handler-names": [
+            1,
+            {
+                "eventHandlerPrefix": "handle",
+                "eventHandlerPropPrefix": "on"
+            }
+        ],
+        "jsx-quotes": [
+            2,
+            "prefer-single"
+        ],
+        "react/sort-comp": [
+            2,
+            {
+                "order": [
+                    "mixins",
+                    "pageName",
+                    "displayName",
+                    "actions",
+                    "contextTypes",
+                    "childContextTypes",
+                    "propTypes",
+                    "defaultProps",
+                    "pure",
+                    "statics",
+                    "state",
+                    "constructor",
+                    "getDefaultProps",
+                    "getInitialState",
+                    "getChildContext",
+                    "getStoresState",
+                    "componentWillMount",
+                    "componentDidMount",
+                    "componentWillReceiveProps",
+                    "shouldComponentUpdate",
+                    "componentWillUpdate",
+                    "componentDidUpdate",
+                    "componentWillUnmount",
+                    "/^component.+$/",
+                    "/^get.+$/",
+                    "/^on.+$/",
+                    "/^handle.+$/",
+                    "everything-else",
+                    "/^render.+$/",
+                    "render"
+                ]
+            }
+        ],
+        "import/no-unresolved": [
+            1,
+            {
+                "commonjs": true,
+                "amd": false
+            }
+        ],
+        "import/no-duplicates": 2,
+        "import/no-named-as-default": 2,
+        "import/no-require": 2,
+        "import/named": 2,
+        "import/namespace": 2,
+        "import/default": 2,
+        "import/export": 2,
+        "import/imports-first": 2
+    },
+    "plugins": [
+        "react",
+        "import"
+    ],
+    "settings": {
+        "import/parser": "babel-eslint",
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        },
+        "import/ignore": [
+            "node_modules",
+            ".json$",
+            ".scss$",
+            "tools/import"
+        ]
+    }
+}

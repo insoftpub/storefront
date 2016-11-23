@@ -1,0 +1,48 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.header {
+    @extend .flex-row;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 44px;
+    letter-spacing: 1px;
+}
+
+.backLink {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.leftColumn {
+    flex: 1 1 100%;
+}
+
+.rightColumn {
+    @media #{$media-desktop} {
+        flex: 1 0 370px;
+    }
+
+    @media #{$media-desktop-large} {
+        flex: 1 0 400px;
+    }
+}
+
+.orderForm{
+    @extend .flex-column;
+}
+
+.controls {
+    @media #{$media-mobile} {
+        display: none;
+    }
+}
+
+.marginTop {
+    margin-top: 15px;
+}

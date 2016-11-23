@@ -1,0 +1,69 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography.scss';
+
+.root {
+    height: 36px;
+    display: inline-block;
+    padding: 10px 20px 11px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:focus,
+    &:active,
+    &:hover {
+        outline: none;
+    }
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+.frame {
+    border: 1px solid $black-color;
+}
+
+.black {
+    background-color: $black-color;
+    color: $white-color;
+
+    &:hover {
+       background-color: $gray-extra-dark-color;
+    }
+}
+
+.white {
+    background-color: $white-color;
+    color: $black-color;
+
+    &:hover {
+        background-color: $gray-light-color;
+    }
+}
+
+.blue {
+    background-color: $blue-color;
+    color: $white-color;
+
+    &:hover {
+        background-color: $sky-blue-color;
+    }
+}
+
+.wide {
+    @extend .flex-wide-element;
+    width: 100%;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.text {
+    white-space: nowrap;
+}

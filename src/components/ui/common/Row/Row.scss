@@ -1,0 +1,22 @@
+@import '../../../styles/common';
+
+.root {
+    display: flex;
+    margin-top: 20px;
+
+    @media #{$media-mobile} {
+        flex-direction: column;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.spaceAround {
+    justify-content: space-around;
+}

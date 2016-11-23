@@ -1,0 +1,32 @@
+@import '../../../styles/common.scss';
+
+.root {
+    table {
+        width: 100%;
+    }
+
+    thead {
+        tr {
+            border-bottom: 2px solid $black-color;
+            padding-bottom: 5px;
+        }
+
+        th {
+            text-align: left;
+            height: 30px;
+        }
+    }
+
+    tbody {
+        td {
+            height: 30px;
+        }
+    }
+}
+
+.priceTitle,
+.priceValue {
+    @media #{$media-mobile} {
+        display: none;
+    }
+}

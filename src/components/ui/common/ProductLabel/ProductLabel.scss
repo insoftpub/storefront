@@ -1,0 +1,48 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    position: relative;
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: .9;
+    font-style: italic;
+    text-align: center;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+}
+
+.inner {
+    border-top: 1px solid $gray-light-color;
+    border-bottom: 1px solid $gray-light-color;
+    padding: 0 6px;
+    background-color: $white-color;
+}
+
+.wrapper {
+    @extend .flex-column;
+}
+
+.arrow {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid $gray-light-color;
+    margin: 0 auto;
+}
+
+.arrowInner {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid $white-color;
+    top: -8px;
+    left: -7px;
+}

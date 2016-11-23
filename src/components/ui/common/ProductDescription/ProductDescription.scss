@@ -1,0 +1,13 @@
+@import '../../../styles/common';
+
+.root {}
+
+.smartAlign {
+    display: flex;
+    justify-content: flex-start;
+
+    @media #{$media-mobile} {
+        justify-content: center;
+    }
+}
+

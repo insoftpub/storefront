@@ -1,0 +1,6 @@
+{
+    "name": "ForgottenPassword",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./ForgottenPassword.jsx"
+}

@@ -1,0 +1,6 @@
+{
+    "name": "ShowMore",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./ShowMore.jsx"
+}

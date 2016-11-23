@@ -1,0 +1,22 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    margin-bottom: 10px;
+}
+.header {
+    text-align: center;
+    margin-top: -9px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: $white-color;
+    padding: 0 10px;
+}
+
+.productList {
+    margin-top: 20px;
+}

@@ -1,0 +1,16 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex';
+
+.root {
+    margin-bottom: 30px;
+}
+
+.editButton {
+    margin-right: 10px;
+}
+
+.cancelButton {}
+
+.buttons {
+    @extend .flex-row;
+}

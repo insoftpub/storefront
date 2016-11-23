@@ -1,0 +1,57 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography';
+
+.root {}
+
+.product {
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.leftColumn {
+    @extend .flex-column;
+    flex: 4 0 0;
+}
+
+.rightColumn {
+    @extend .flex-column;
+    flex: 4 0 0;
+}
+
+.removeColumn {
+    @extend .flex-column;
+    flex: 1 0 0;
+    align-items: center;
+}
+
+.padding {
+    @media #{$media-mobile} {
+        padding-right: 20px;
+    }
+}
+
+.removeIcon {
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.name,
+.price,
+.variant {
+    font-size: 10px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.name {
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 12px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,9 @@
+@import '../../../styles/common.scss';
+
+.product {
+    border-bottom: 1px solid $gray-light-color;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}

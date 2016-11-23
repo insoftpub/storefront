@@ -1,0 +1,57 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.row {
+    &.smallMargin {
+        margin-bottom: 10px;
+    }
+
+    &.mediumMargin {
+        margin-bottom: 20px;
+    }
+
+    &.largeMargin {
+        margin-bottom: 30px;
+    }
+
+    &.noMargin {
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.inline {
+    @extend .flex-row;
+
+    .row {
+        @extend .flex-equal-columns;
+        margin-right: 3px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.changeDirection {
+    @media #{$media-phone} {
+        display: block;
+
+        .row {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.submitButton {
+    border: solid 2px $black-color;
+    width: 80px;
+    text-align: center;
+    margin: 20px 0 10px 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    position: relative;
+    font-weight: 300;
+	min-height: 300px;
+    margin-bottom: 30px;
+}
+
+.loader {
+    @media #{$media-mobile} {
+        display: flex;
+        height: $mobile-viewport-height;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.list {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,17 @@
+@import '../../../styles/extends/flex.scss';
+
+.flexible {
+    @extend .flex-row;
+}
+
+.bottomMargin {
+    margin-bottom: 30px;
+}
+
+.separator {
+    margin-top: 30px;
+}
+
+.centered {
+    text-align: center;
+}

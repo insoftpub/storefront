@@ -1,0 +1,31 @@
+@import '../../../styles/common.scss';
+
+.root {
+    cursor: pointer;
+}
+
+.inner {
+    position: relative;
+}
+
+.aTag {
+    text-decoration: none;
+    color: inherit;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.custom {
+    cursor: pointer;
+}
+
+.hoverAnimation {
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}

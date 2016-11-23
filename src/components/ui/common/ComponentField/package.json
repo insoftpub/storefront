@@ -1,0 +1,6 @@
+{
+    "name": "ComponentField",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./ComponentField.jsx"
+}

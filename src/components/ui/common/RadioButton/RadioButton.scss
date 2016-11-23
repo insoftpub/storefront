@@ -1,0 +1,19 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    @extend .flex-row;
+    align-items: center;
+}
+
+.title {
+    @extend .flex-row;
+    @extend .flex-centered;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.icon {
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+{
+    "name": "Title",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./Title.js"
+}

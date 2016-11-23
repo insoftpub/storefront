@@ -1,0 +1,17 @@
+@import '../../../styles/common.scss';
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: $white-color;
+    min-width: 100px;
+    padding: 5px;
+}
+
+.root:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+}

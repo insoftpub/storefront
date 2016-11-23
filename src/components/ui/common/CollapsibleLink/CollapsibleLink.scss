@@ -1,0 +1,34 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.dropdownInner {
+    display: block;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.sublink {
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: 1px;
+
+    @media #{$media-desktop} {
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+.wrapperSublink {
+    display: block;
+}
+
+.row {
+    @extend .flex-row;
+    justify-content: space-between;
+    align-items: center;
+}

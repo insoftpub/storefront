@@ -1,0 +1,72 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/typography.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {}
+
+.title {
+    @extend .flex-row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.greedy {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 10;
+}
+
+.margin {
+    margin-bottom: 15px;
+}
+
+.row {
+    @extend .flex-row;
+}
+
+.button {
+    @extend .unselectable;
+    @extend .flex-column;
+    align-items: center;
+    line-height: 25px;
+
+    cursor: pointer;
+
+    margin: 5px;
+    width: 30%;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+
+    border: 0.5px solid $gray-light-color;
+}
+
+.left {
+    border-left: 0.5px solid $gray-light-color;
+    border-right: 0.5px solid $gray-light-color;
+}
+
+.right {
+    border-right: 0.5px solid $gray-light-color;
+}
+
+.chosen {
+    background-color: $gray-light-color;
+}
+
+.column {
+    flex: 1 0 0;
+    flex-direction: column;
+}
+
+.container {
+    @extend .flex-row;
+    flex-wrap: wrap;
+    border: 0.5px solid $gray-light-color;
+}

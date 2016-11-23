@@ -1,0 +1,81 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography.scss';
+@import '../../../styles/mixins/placeholder.scss';
+
+.root {
+    @extend .flex-column;
+}
+
+.wide {
+    @extend .flex-wide-element;
+
+    .input {
+        @extend .flex-wide-element;
+    }
+}
+
+.leftLabelPosition {
+    @extend .flex-row;
+}
+
+.rightLabelPosition {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.hasOffset {
+    width: 30%;
+}
+
+.label {
+    @extend .unselectable;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid $black-color;
+    color: $black-color;
+    background-color: $white-color;
+    padding: 7px;
+
+    &:focus,
+    &:active,
+    &:hover {
+        outline: none;
+    }
+
+    @include placeholder {
+        color: $gray-color;
+        font-weight: 300;
+    }
+}
+
+.blackFrame {
+    border: 1px solid $black-color;
+    border-radius: 0;
+}
+
+.redFrame {
+    border: 1px solid $red-color;
+    border-radius: 0;
+}
+
+.message {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.error {
+    color: $red-color;
+}
+
+.controls {
+    @extend .flex-column;
+    flex: 1;
+}

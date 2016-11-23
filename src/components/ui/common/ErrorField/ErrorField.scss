@@ -1,0 +1,15 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    background-color: $red-extra-light-color;
+    padding: 10px;
+}
+
+.errorText {
+    font-size: 13px;
+    font-weight: 400;
+    color: $red-color;
+}

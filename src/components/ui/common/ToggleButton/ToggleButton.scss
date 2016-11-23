@@ -1,0 +1,25 @@
+@import '../../../styles/extends/flex';
+@import '../../../styles/common.scss';
+
+.root {
+    @extend .flex-row;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+
+.inner {
+    @extend .flex-centered;
+    @extend .flex-row;
+    border: solid 1px $black-color;
+    background-color: $white-color;
+    color: $black-color;
+    width: 100%;
+    margin: 5px 15px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.checked {
+    background-color: $black-color;
+    color: $white-color;
+}

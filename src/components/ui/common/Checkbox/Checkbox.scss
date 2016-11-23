@@ -1,0 +1,51 @@
+@import '../../../styles/extends/typography';
+@import '../../../styles/extends/flex';
+@import '../../../styles/common.scss';
+
+.root {
+    @extend .flex-row;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+
+    .title {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+
+.title {
+    @extend .unselectable;
+    margin-left: 10px;
+}
+
+.icon {
+    position: relative;
+    top: -3px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+}
+
+
+.square {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.approved {
+    position: absolute;
+    left: 3px;
+    top: -2px;
+}

@@ -1,0 +1,73 @@
+@import '../../../styles/common';
+@import '../../../styles/extends/flex';
+
+.root {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 19;
+}
+
+.mask {
+    z-index: 19;
+}
+
+.dialogWrapper {
+    @media #{$media-phone} {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 30px;
+    }
+}
+
+.dialog {
+    @extend .flex-column;
+
+    background-color: $white-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    padding: 15px;
+    width: 600px;
+
+    @media #{$media-phone} {
+        width: 100%;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.controls {
+    &.alignLeft {
+        text-align: left;
+    }
+
+    &.alignRight {
+        text-align: right;
+    }
+
+    &.alignCenter {
+        text-align: center;
+    }
+}
+
+.title {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.content {
+}
+
+

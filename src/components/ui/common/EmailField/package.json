@@ -1,0 +1,6 @@
+{
+    "name": "EmailField",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./EmailField.jsx"
+}

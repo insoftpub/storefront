@@ -1,0 +1,6 @@
+{
+    "name": "ProductInfo",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./ProductInfo.jsx"
+}

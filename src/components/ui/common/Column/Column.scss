@@ -1,0 +1,45 @@
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/common';
+
+.root {}
+
+.centerAlign {
+    align-items: center;
+}
+
+.topAlign {
+    align-items: flex-start;
+}
+
+.leftDirection {
+    @extend .flex-row;
+}
+
+.stretchAlign {
+    align-items: stretch;
+    flex-grow: 10;
+}
+
+.bottomDirection {
+    @extend .flex-column;
+}
+
+.hasLeftMargin {
+    margin-left: 15px;
+
+    @media #{$media-mobile} {
+        margin-left: 0;
+    }
+}
+
+.hasRightMargin {
+    margin-right: 15px;
+
+    @media #{$media-mobile} {
+        margin-right: 0;
+    }
+}
+
+.unshrinkable {
+    flex-shrink: 0;
+}

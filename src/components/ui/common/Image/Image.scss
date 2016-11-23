@@ -1,0 +1,9 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/typography.scss';
+
+.root {
+    @extend .unselectable;
+
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,63 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography.scss';
+
+.root {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.row {
+    @extend .flex-row;
+}
+
+.high {
+    line-height: 44px;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.contentCentered {
+    align-items: center;
+    justify-content: center;
+}
+
+.contentLeft {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contentRight {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.logo {
+    font-size: 44px;
+    letter-spacing: 1px;
+}
+
+.equal {
+    display: flex;
+    flex: 1 0 100px;
+}
+
+.link {
+    @extend .unselectable;
+    line-height: 40px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.pad {
+    margin-left: 10px;
+    margin-right: 10px;
+}

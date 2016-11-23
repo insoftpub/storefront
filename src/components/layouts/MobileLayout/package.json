@@ -1,0 +1,6 @@
+{
+    "name": "MobileLayout",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./MobileLayout.jsx"
+}

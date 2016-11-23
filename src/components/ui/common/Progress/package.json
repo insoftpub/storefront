@@ -1,0 +1,6 @@
+{
+    "name": "Progress",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./Progress.jsx"
+}

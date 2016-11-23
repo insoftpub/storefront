@@ -1,0 +1,6 @@
+{
+  "name": "CartPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./CartPage.jsx"
+}

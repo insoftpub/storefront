@@ -1,0 +1,6 @@
+{
+    "name": "Slide",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./Slide.jsx"
+}

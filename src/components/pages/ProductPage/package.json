@@ -1,0 +1,6 @@
+{
+  "name": "ProductPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ProductPage.jsx"
+}

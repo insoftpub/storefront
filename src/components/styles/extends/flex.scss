@@ -1,0 +1,29 @@
+.flex-wide-element {
+    display: flex;
+    flex-grow: 1;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-equal-columns {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.flex-centered {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}

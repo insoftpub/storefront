@@ -1,0 +1,6 @@
+{
+    "name": "Mask",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./Mask.jsx"
+}

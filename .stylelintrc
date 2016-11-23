@@ -1,0 +1,12 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "number-leading-zero": "always",
+        "indentation": [
+            4, {
+                "indentInsideParens": "once-at-root-twice-in-block",
+                "severity": "warning"
+            }
+        ],
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "name": "EmptyLayout",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./EmptyLayout.jsx"
+}

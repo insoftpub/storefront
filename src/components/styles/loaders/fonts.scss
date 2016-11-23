@@ -1,0 +1,18 @@
+@import '../mixins/fontface.scss';
+
+$roboto-path: "../../fonts/roboto/Roboto";
+$dosis-path: "../../fonts/dosis/Dosis";
+
+@include font-face(roboto, "#{$roboto-path}-Thin" , 100 , normal, ttf);
+@include font-face(roboto, "#{$roboto-path}-Light" , 300 , normal, ttf);
+@include font-face(roboto, "#{$roboto-path}-Regular", 400 , normal, ttf);
+@include font-face(roboto, "#{$roboto-path}-Medium", 500 , normal, ttf);
+@include font-face(roboto, "#{$roboto-path}-Bold", 700 , normal, ttf);
+
+@include font-face(dosis, "#{$dosis-path}-ExtraLight" , 200 , normal, woff2 ttf woff);
+@include font-face(dosis, "#{$dosis-path}-Light" , 300 , normal, woff2 ttf woff);
+@include font-face(dosis, "#{$dosis-path}-Regular", 400 , normal, woff2 ttf woff);
+@include font-face(dosis, "#{$dosis-path}-Medium", 500 , normal, woff2 ttf woff);
+@include font-face(dosis, "#{$dosis-path}-SemiBold", 600 , normal, woff2 ttf woff);
+@include font-face(dosis, "#{$dosis-path}-Bold", 700 , normal, woff2 ttf woff);
+@include font-face(dosis, "#{$dosis-path}-ExtraBold", 800 , normal, woff2 ttf woff);

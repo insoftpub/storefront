@@ -1,0 +1,17 @@
+@import '../../../styles/common.scss';
+
+.root {
+
+}
+
+.small {
+    @media #{$media-desktop} {
+        width: 300px;
+    }
+}
+
+.medium {
+    @media #{$media-desktop} {
+        width: 600px;
+    }
+}

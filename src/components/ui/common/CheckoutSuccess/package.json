@@ -1,0 +1,6 @@
+{
+    "name": "CheckoutSuccess",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./CheckoutSuccess.jsx"
+}

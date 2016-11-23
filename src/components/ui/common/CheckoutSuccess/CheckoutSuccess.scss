@@ -1,0 +1,31 @@
+@import '../../../styles/common.scss';
+
+.root {
+    margin-bottom: 100px;
+}
+
+.text {
+    background-color: $gray-extra-light-color;
+    padding: 40px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 40px 0;
+
+    @media #{$media-mobile} {
+        padding: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 20px 0;
+    }
+}
+
+.header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @media #{$media-mobile} {
+        font-size: 20px;
+    }
+}

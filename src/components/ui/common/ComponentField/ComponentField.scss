@@ -1,0 +1,6 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    @extend .flex-wide-element;
+}

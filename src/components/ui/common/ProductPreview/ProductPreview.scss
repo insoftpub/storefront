@@ -1,0 +1,71 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+
+.root {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+    background: $white-color;
+
+    width: 50%;
+
+    @media #{$media-tablets} {
+        width: 33.33%;
+    }
+
+    @media #{$media-desktop} {
+        width: 25%;
+
+    }
+}
+
+.info {
+    @extend .flex-column;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 10px;
+}
+
+.brand {
+    margin: 0 0 5px;
+
+    line-height: 14px;
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 3px;
+}
+
+.title {
+    margin: 0 0 3px;
+
+    line-height: 14px;
+
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.price {
+    margin: 0 0 5px;
+
+    color: $black-color;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 400;
+ }
+
+.smartAlign {
+    display: flex;
+    justify-content: flex-start;
+
+    @media #{$media-mobile} {
+        justify-content: center;
+    }
+}

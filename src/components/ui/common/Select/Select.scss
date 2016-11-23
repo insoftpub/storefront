@@ -1,0 +1,148 @@
+@import '../../../styles/common.scss';
+@import '../../../styles/extends/flex.scss';
+@import '../../../styles/extends/typography.scss';
+
+.root {
+    @extend .flex-column;
+    position: relative;
+}
+
+.leftLabelPosition {
+    @extend .flex-row;
+    align-items: center;
+}
+
+.rightLabelPosition {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.collapsed {
+    display: none
+}
+
+.wide {
+    @extend .flex-wide-element;
+
+    .input {
+        @extend .flex-wide-element;
+    }
+}
+
+.label {
+    @extend .unselectable;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hasOffset {
+    width: 30%;
+}
+
+.option,
+.select {
+    @extend .unselectable;
+    @extend .flex-row;
+
+    position: relative;
+    color: $black-color;
+
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    background-color: $white-color;
+    padding: 0 7px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    min-height: 33px;
+
+    &:focus,
+    &:active,
+    &:hover {
+        outline: none;
+        background-color: $gray-extra-light-color;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: calc(100% - 2px);
+    border-left: 1px solid $black-color;
+    border-bottom: 1px solid $black-color;
+    border-right: 1px solid $black-color;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.frame {
+    border: 1px solid $black-color;
+    border-radius: 0;
+}
+
+.redFrame {
+    border: 1px solid $red-color;
+}
+
+.selectField {
+    @extend .flex-row;
+
+    justify-content: space-between;
+}
+
+.placeholder {
+    font-size: 12px;
+    color: $gray-color;
+    font-weight: 300;
+}
+
+.chosenName {
+    color: $black-color;
+}
+
+.chosen {
+    @extend .flex-column;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+}
+
+.selected {
+    background-color: $gray-light-color;
+}
+
+.content {
+    @extend .flex-column;
+    flex: 1;
+    position: relative;
+}
+
+.spanStyle {
+    border: none;
+    background-color: transparent;
+    cursor: default;
+}
+
+.message {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.error {
+    color: $red-color;
+}
+
+.disabled {
+    color: $gray-color;
+    border: 1px solid transparent;
+
+    &:focus,
+    &:active,
+    &:hover {
+        background-color: $white-color;
+    }
+}

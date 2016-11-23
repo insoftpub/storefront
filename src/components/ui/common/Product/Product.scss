@@ -1,0 +1,58 @@
+@import '../../../styles/common';
+
+.root {
+    margin-bottom: 30px;
+}
+
+.viewer {
+    @media #{$media-mobile} {
+        margin-top: 10px;
+    }
+}
+
+.info {
+    @media #{$media-desktop} {
+        flex: 1 0 370px;
+    }
+}
+
+.panelWrapper {
+    border-bottom: 1px solid $gray-color;
+    margin-bottom: 5px;
+    padding: 7px;
+
+    &:first-child {
+        border-top: 1px solid $gray-color;
+    }
+}
+
+.panelContent {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.proceedToCheckout {
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.margin {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-top: 0.5px solid $black-color;
+
+    width: 85%;
+}
+
+.leftColumn {
+    @media #{$media-desktop} {
+        flex-basis: 450px;
+    }
+}

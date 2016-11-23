@@ -1,0 +1,45 @@
+@import '../../../styles/common';
+@import '../../../styles/extends/flex';
+@import '../../../styles/extends/typography';
+
+.orderSummary {
+    background-color: $gray-extra-light-color;
+    padding: 20px 10px;
+}
+
+.orderItem {
+    @extend .flex-row;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.promocode {
+    align-items: center;
+
+    @media #{$media-phone-little} {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.promocodeForm {
+    @media #{$media-phone-little} {
+        margin-top: 5px;
+    }
+}
+
+.separator {
+    margin-bottom: 15px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: 400;
+}

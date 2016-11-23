@@ -1,0 +1,45 @@
+@import '../../../styles/common.scss';
+
+.root {
+    margin: 0 0 20px 0;
+
+    @media #{$media-mobile} {
+        margin: 0 0 10px 0;
+    }
+}
+
+.text {
+	margin: 0;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 15px;
+    line-height: 24px;
+    text-align: left;
+
+    @media #{$media-mobile} {
+        letter-spacing: 1px;
+    }
+}
+
+.h {
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.subtext {
+	font-weight: 300;
+	margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    @media #{$media-mobile} {
+        font-size: 14px;
+    }
+}
+
+.subtextNoMargin {
+    margin: 0;
+}

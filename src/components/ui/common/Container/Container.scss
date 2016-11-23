@@ -1,0 +1,60 @@
+@import '../../../styles/common.scss';
+
+.root {
+    @media #{$media-desktop} {
+        max-width: 940px;
+    }
+
+    @media #{$media-desktop-large} {
+        max-width: 1170px;
+    }
+}
+
+.centeringContent {
+    margin: 0 auto;
+}
+
+.hasBottomPadding {
+    padding-bottom: 20px;
+
+    @media #{$media-mobile} {
+        padding-bottom: 10px;
+    }
+}
+
+.hasTopPadding {
+    padding-top: 20px;
+
+    @media #{$media-mobile} {
+        padding-top: 10px;
+    }
+}
+
+.hasLeftPadding {
+    @media #{$media-mobile} {
+        padding-left: 10px;
+    }
+}
+
+.hasRightPadding {
+    @media #{$media-mobile} {
+        padding-right: 10px;
+    }
+}
+
+.scrollToTopIcon {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 50%;
+    padding: 6px 9px 10px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: $gray-dark-color;
+
+    &.visible {
+        display: block;
+    }
+}
+

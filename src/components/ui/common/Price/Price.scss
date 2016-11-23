@@ -1,0 +1,22 @@
+@import '../../../styles/common';
+@import '../../../styles/extends/flex';
+@import '../../../styles/extends/typography';
+
+.root {}
+
+.price {
+    @extend .unselectable;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.oldPrice {
+    @extend .unselectable;
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+
+.newPrice {
+    @extend .unselectable;
+    font-weight: 700;
+}

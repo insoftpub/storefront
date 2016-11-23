@@ -1,0 +1,32 @@
+// Common
+$container-root-padding: 10px;
+
+// Mobile
+$mobile-header-height: 43px;
+$mobile-product-controls-height: 52px;
+$mobile-product-controls-borders: 2px;
+$mobile-viewport-height: calc(100vh - #{$mobile-header-height} - #{$container-root-padding});
+$mobile-image-wrapper-height: calc(
+    100vh - #{$mobile-header-height} - #{$container-root-padding} -
+    #{$mobile-product-controls-height} - #{$mobile-product-controls-borders}
+);
+$mobile-loader-width: 60px;
+$mobile-filter-height: 150px;
+
+// iOS
+$ios-navigation-bars-height: 69px;
+$ios-mobile-viewport-height: calc(
+    100vh - #{$mobile-header-height} - #{$container-root-padding} - #{$ios-navigation-bars-height}
+);
+$ios-mobile-image-wrapper-height: calc(
+    100vh - #{$mobile-header-height} - #{$container-root-padding} -
+    #{$mobile-product-controls-height} - #{$mobile-product-controls-borders} - #{$ios-navigation-bars-height}
+);
+
+// Desktop
+$desktop-header-height: 132px;
+$desktop-loader-width: 80px;
+
+$desktop-navigation-width: 250px;
+$desktop-product-description: 300px;
+$desktop-large-screen-image-width: calc((90vw - #{$desktop-navigation-width} - #{$desktop-product-description})*0.5);
