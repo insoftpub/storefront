@@ -1,5 +1,7 @@
 # ReactJS Storefront
 
+License MIT
+
 ## File structure
 
 * **/node_modules** - External dependencies

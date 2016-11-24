@@ -14,3 +14,8 @@ html(class="no-js", lang="")
     #app!= body
     script!= script
     script(src=entry)
+    script.
+       window.ga = function() {ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+       ga('create','#{trackingId}','auto');ga('send','pageview')
+    if trackingId
+      script(src="https://www.google-analytics.com/analytics.js", async=true, defer=true)

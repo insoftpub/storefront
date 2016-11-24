@@ -2,5 +2,5 @@
     "name": "SwipeableViews",
     "version": "0.0.0",
     "private": true,
-    "main": "./SwipeableViews.js"
+    "main": "./SwipeableViews.jsx"
 }
