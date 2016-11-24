@@ -33,9 +33,15 @@ function token(req, res) {
 
     getToken(req, res)
         .then(token => getProfile(token))
-        .then(profile => getSchemaProfile(profile, domain))
+        .then(profile => {
+            if (!profile.email) {
+                throw new Error();
+            }
+
+            return getSchemaProfile(profile, domain);
+        })
         .then(schemaProfile => res.cookie('account_id', schemaProfile.id).redirect('/'))
-        .catch(error => res.send({ error }));
+        .catch(error => res.redirect('/'));
 }
 
 export default token;
