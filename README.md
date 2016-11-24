@@ -1,6 +1,6 @@
 # ReactJS Storefront
 
-License MIT
+react-store.com / License MIT
 
 ## File structure
 
