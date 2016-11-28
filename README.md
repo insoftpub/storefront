@@ -2,6 +2,8 @@
 
 License MIT
 
+Demo: https://react-store.com
+
 ## File structure
 
 * **/node_modules** - External dependencies
