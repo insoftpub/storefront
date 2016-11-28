@@ -4,6 +4,12 @@ License MIT
 
 Demo: https://react-store.com
 
+## System requirements
+
+* Mac OS X, Windows, or Linux
+* Node.js v6.9.1 or newer
+* npm v3.10 or newer
+
 ## File structure
 
 * **/node_modules** - External dependencies
