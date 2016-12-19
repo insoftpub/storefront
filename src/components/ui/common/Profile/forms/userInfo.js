@@ -34,25 +34,28 @@ const
     }));
 
 export default (component, s) => {
-    const { user } = component.state;
+    const { user, isEditMode } = component.state;
 
     return [{
         name: 'first_name',
         title: 'Name',
+        onClick: component.handleInputClick,
         value: user['first_name']
     }, {
         name: 'phone',
         title: 'Phone №',
+        onClick: component.handleInputClick,
         value: user['phone']
     }, {
         name: 'email',
         type: 'email',
         title: 'E-mail',
         value: user['email'],
-        nonEditable: true
+        editable: false
     }, {
         name: 'shipping.address1',
         title: 'Address',
+        onClick: component.handleInputClick,
         value: user['shipping']['address1']
     }, {
         name: 'shipping.state',
@@ -60,10 +63,12 @@ export default (component, s) => {
         title: 'Region',
         options: regions,
         defaultValue: 'region1',
+        onClick: component.handleInputClick,
         value: user['shipping']['state']
     }, {
         name: 'shipping.city',
         title: 'City',
+        onClick: component.handleInputClick,
         value: user['shipping']['city']
     }, {
         name: 'edit',
@@ -73,9 +78,9 @@ export default (component, s) => {
                 <Button isSubmit className={s.editButton}>
                     {component.state.isEditMode ? 'Save' : 'Edit'}
                 </Button>
-                <Button color={COLOR_WHITE} onClick={component.handleCancelClick}>
+                {isEditMode && <Button color={COLOR_WHITE} onClick={component.handleCancelClick}>
                     Cancel
-                </Button>
+                </Button>}
             </div>
         )
     }];

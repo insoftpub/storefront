@@ -23,7 +23,7 @@
  */
 
 import { routes } from '../../config';
-import { forEach, filter, isNil, chain, values } from 'lodash';
+import { forEach, filter, isNil, chain } from 'lodash';
 
 const BACK_POINT_PATHS = [
     routes.PRODUCTS,

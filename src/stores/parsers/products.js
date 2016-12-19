@@ -23,11 +23,7 @@
  */
 
 import {
-    cloneDeep,
     map,
-    forEach,
-    last,
-    sortBy,
     omit,
     head,
     isEmpty,
@@ -52,7 +48,7 @@ function parseOptions({ options }) {
             ...memo,
             [option.name]: option.values
         }), {})
-    }
+    };
 }
 
 function parseVariants(product) {
