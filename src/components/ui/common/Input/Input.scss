@@ -78,9 +78,9 @@
     border-radius: 0;
 }
 
-.spanStyle {
-    border: none;
-    background-color: transparent;
+.nonEditable {
+    background-color: $gray-extra-light-color;
+    border: 1px solid transparent;
     cursor: default;
 }
 

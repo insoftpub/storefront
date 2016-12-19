@@ -1,38 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style type="text/css">
         .text {
             font-size: 13px !important;
         }
+
         .small-text {
             font-size: 12px !important;
         }
+
         .align-right {
             text-align: right !important;
         }
+
         .h1 {
-            font-weight:400 !important;
+            font-weight: 400 !important;
         }
+
         @media (max-width: 600px) {
             .text {
                 font-size: 14px !important;
             }
+
             .text span,
             .text a {
                 color: #000 !important;
                 text-decoration: none !important;
             }
+
             .small-text span,
             .small-text a {
-                color:#777 !important;
+                color: #777 !important;
                 text-decoration: none !important;
             }
+
             .align-right {
                 text-align: left !important;
             }
@@ -40,50 +48,73 @@
     </style>
 </head>
 
-<body style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#ffffff;">
+<body
+    style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;background-color:#ffffff;">
 <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
     <table align="center" style="border-spacing:0;color:#333333;width:100%;">
         <tr> <!-- background:#000 -->
             <td style="background:white;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;text-align:center">
                 <a title="Store {{shopName}}" href="{{shopUrl}}" style="color:#337ff1">
-                    <img width="150px" src="{{shopUrl}}/images/logo-black.png" alt="Store {{shopName}}" />
+                    <img width="150px" src="{{shopUrl}}/images/logo-black.png" alt="Store {{shopName}}"/>
                 </a>
             </td>
         </tr>
     </table>
     <div class="webkit" style="max-width:600px;">
-        <table class="outer" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;Margin:0 auto;width:100%;max-width:600px;">
+        <table class="outer" align="center"
+               style="border-spacing:0;font-family:sans-serif;color:#333333;Margin:0 auto;width:100%;max-width:600px;">
             <tr>
                 <td class="one-column" style="padding-top:0;padding-bottom:50px;padding-right:0;padding-left:0;">
                     <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
                         <tr>
-                            <td class="inner contents" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;width:100%;text-align:center;">
-                                <p class="h1" style="Margin:0;font-weight:600;letter-spacing: -1px;font-size:24px;Margin-bottom:10px;">Thank you for your purchase!</p>
-                                <p style="Margin:0;font-weight:100;font-size:22px;letter-spacing: -1px;font-style:italic;Margin-bottom:10px;">Your order is confirmed</p>
+                            <td class="inner contents"
+                                style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;width:100%;text-align:center;">
+                                <p class="h1"
+                                   style="Margin:0;font-weight:600;letter-spacing: -1px;font-size:24px;Margin-bottom:10px;">
+                                    Thank you for your purchase!</p>
+                                <p style="Margin:0;font-weight:100;font-size:22px;letter-spacing: -1px;font-style:italic;Margin-bottom:10px;">
+                                    Your order is confirmed</p>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
             <tr>
-                <td class="three-column" style="padding-right:0;padding-left:0;text-align:left;font-size:0;padding-top:10px;padding-bottom:30px;">
-                    <table class="column" style="border-spacing:0;font-family:sans-serif;color:#333333;width:70%;display:inline-block;vertical-align:top;">
+                <td class="three-column"
+                    style="padding-right:0;padding-left:0;text-align:left;font-size:0;padding-top:10px;padding-bottom:30px;">
+                    <table class="column"
+                           style="border-spacing:0;font-family:sans-serif;color:#333333;width:70%;display:inline-block;vertical-align:top;">
                         <tr>
-                            <td class="inner" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
-                                <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
+                            <td class="inner"
+                                style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
+                                <table class="contents"
+                                       style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
                                     <tr>
-                                        <td class="text" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                            <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
-                                                <tr><td class="text"><span><b>{{first_name}}</b></span></td></tr>
-                                                <tr><td class="text"><span>{{shipping.address1}}</span></td></tr>
-                                                <tr><td class="text"><span>{{shipping.city}}</span></td></tr>
-                                                <tr><td class="text"><span>{{shipping.state}}</span></td></tr>
-                                                <tr><td class="text"><span>{{phone}}</span></td></tr>
+                                        <td class="text"
+                                            style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                                            <table class="contents"
+                                                   style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
+                                                <tr>
+                                                    <td class="text"><span><b>{{first_name}}</b></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text"><span>{{shipping.address1}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text"><span>{{shipping.city}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text"><span>{{shipping.state}}</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text"><span>{{phone}}</span></td>
+                                                </tr>
                                             </table>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text" style="padding-bottom:0;padding-right:0;padding-left:0;padding-top:10px;font-style:italic">
+                                        <td class="text"
+                                            style="padding-bottom:0;padding-right:0;padding-left:0;padding-top:10px;font-style:italic">
                                             {{comments}}
                                         </td>
                                     </tr>
@@ -91,17 +122,22 @@
                             </td>
                         </tr>
                     </table>
-                    <table class="column" style="border-spacing:0;font-family:sans-serif;color:#333333;width:30%;display:inline-block;vertical-align:top;">
+                    <table class="column"
+                           style="border-spacing:0;font-family:sans-serif;color:#333333;width:30%;display:inline-block;vertical-align:top;">
                         <tr>
-                            <td class="inner" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
-                                <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
+                            <td class="inner"
+                                style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
+                                <table class="contents"
+                                       style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
                                     <tr>
-                                        <td class="text align-right" style="width:180px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                            <b>Order #{{number}}</b>
+                                        <td class="text align-right"
+                                            style="width:180px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                                            <b>Order #{{order_number}}</b>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text align-right" style="width:180px;padding-bottom:0;padding-right:0;padding-left:0;padding-top:10px;">
+                                        <td class="text align-right"
+                                            style="width:180px;padding-bottom:0;padding-right:0;padding-left:0;padding-top:10px;">
                                             {{date_created}}
                                         </td>
                                     </tr>
@@ -114,18 +150,28 @@
 
             <tr>
                 <td style="border-top:solid 1px #eee;">
-                    <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
+                    <table class="contents"
+                           style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
                         {{#each products}}
                         <tr>
                             <td style="width:25%;">
-                                <img src="{{this.product.image}}" alt="Icon" style="max-width:100%;"/>
+                                <img src="{{this.image.url}}" alt="Icon" style="max-width:100%;"/>
                             </td>
                             <td style="padding:10px 0;">
-                                <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
-                                    <tr><td><span>{{this.product.manufacturer_name}}</span></td></tr>
-                                    <tr><td><span>{{this.product.name}}</span></td></tr>
-                                    <tr><td><span>Size: {{this.variant.name}}</span></td></tr>
-                                    <tr><td><span>Sku: {{this.product.sku}}</span></td></tr>
+                                <table class="contents"
+                                       style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
+                                    <tr>
+                                        <td><span>{{this.manufacturer_name}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>{{this.name}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Size: {{this.variant.name}}</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>Sku: {{this.sku}}</span></td>
+                                    </tr>
                                 </table>
                             </td>
                             <td style="width:20%;">
@@ -138,29 +184,36 @@
             </tr>
 
             <tr>
-                <td class="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-top:2px solid #000;border-bottom:2px solid #000">
+                <td class="one-column"
+                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-top:2px solid #000;border-bottom:2px solid #000">
                     <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
                         <tr>
-                            <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
+                            <td class="inner contents"
+                                style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
                                 <p class="text" style="Margin:0;font-size:16px;">Products:</p>
                             </td>
-                            <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
+                            <td class="inner contents"
+                                style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
                                 <p class="text" style="Margin:0;font-size:16px;">{{sub_total}}</p>
                             </td>
                         </tr>
                         <tr>
-                            <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
+                            <td class="inner contents"
+                                style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
                                 <p class="text" style="Margin:0;font-size:16px;">Delivery:</p>
                             </td>
-                            <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
+                            <td class="inner contents"
+                                style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
                                 <p class="text" style="Margin:0;font-size:16px;">{{shipment_price}}</p>
                             </td>
                         </tr>
                         <tr>
-                            <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
+                            <td class="inner contents"
+                                style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:60%;text-align:right;">
                                 <p class="text" style="Margin:0;font-size:16px;font-weight:bold;">Total:</p>
                             </td>
-                            <td class="inner contents" style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
+                            <td class="inner contents"
+                                style="padding-top:7px;padding-bottom:7px;padding-right:10px;padding-left:10px;width:40%;text-align:right;">
                                 <p class="text" style="Margin:0;font-size:16px;font-weight:bold;">{{grand_total}}</p>
                             </td>
                         </tr>

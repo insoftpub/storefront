@@ -81,7 +81,7 @@ class Orders extends Component {
                     <tbody>
                         {map(orders, order =>
                             <tr key={order.id}>
-                                <td>{order.num}</td>
+                                <td>{order.order_number}</td>
                                 <td className={s.priceValue}>{order.grand_total}</td>
                                 <td>{moment(order.date_created).format('YYYY-MM-DD')}</td>
                                 <td>{order.status}</td>

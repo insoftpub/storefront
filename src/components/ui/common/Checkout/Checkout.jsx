@@ -65,9 +65,14 @@ class Checkout extends Component {
 
     state = {
         activeTab: DELIVERY_TAB_INDEX,
+        orderProcessing: false,
         loginErrors: null,
         orderErrors: null
     };
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return !nextState.orderProcessing;
+    }
 
     getStoresState() {
         const
@@ -85,35 +90,44 @@ class Checkout extends Component {
         };
     }
 
-    handleDeliveryAddressSubmit = values => {
-        const
-            { user, isLogged, products, cartId } = this.state,
-            { state, city, address1, email, password, ...rest } = values;
-        let defer = Promise.resolve();
+    getUser({ email, password }) {
+        const { user, isLogged } = this.state;
 
         if (!isLogged) {
-            defer = defer.then(() => this.context.executeAction('user/register', {
+            return this.context.executeAction('user/register', {
                 email,
                 password
-            }));
+            });
+        } else {
+            return Promise.resolve(user);
         }
+    }
 
-        defer
-            .then(() => Promise.all([
+    handleDeliveryAddressSubmit = values => {
+        const
+            { products, cartId } = this.state,
+            { email, password, ...contactInfo } = values;
+
+        this.setState({ orderProcessing: true });
+        this.getUser({ email, password })
+            .then(user => Promise.all([
                 this.context.executeAction('user/update', {
                     email,
-                    shipping: { state, city, address1 },
-                    ...rest
+                    ...contactInfo
                 }),
                 this.context.executeAction('orders/create', {
                     user,
                     products,
                     cartId,
-                    contactInfo: values
+                    email,
+                    ...contactInfo
                 })
                     .then(() => this.context.executeAction('navigate/to', { url: routes.CHECKOUT_SUCCESS }))
             ]))
-            .catch(error => this.setState({ orderErrors: error.details.email }));
+            .catch(error => this.setState({
+                orderErrors: error.details.email,
+                orderProcessing: false
+            }));
     };
 
     handleLoginSubmit = data => {
@@ -151,7 +165,7 @@ class Checkout extends Component {
 
     render() {
         const
-            { products, cartLoaded, cartId } = this.state,
+            { isLogged, products, cartLoaded, cartId } = this.state,
             { isDesktop, isTablet } = this.context.getUserAgent();
 
         return (
@@ -183,7 +197,7 @@ class Checkout extends Component {
                                 activeTab={this.state.activeTab}
                                 onChange={this.handleActiveTabChange}
                             >
-                                <Tab title={this.state.isLogged ? 'Contact information' : 'First time here?'}>
+                                <Tab title={!isLogged ? 'First time here?' : 'Contact information'}>
                                     <Form
                                         name='deliveryAddress'
                                         items={getDeliveryAddressItems(this)}
@@ -192,7 +206,7 @@ class Checkout extends Component {
                                         onSubmit={this.handleDeliveryAddressSubmit}
                                     />
                                 </Tab>
-                                {!this.state.isLogged && <Tab title='Login'>
+                                {!isLogged && <Tab title='Login'>
                                     <Form
                                         items={getLoginItems(this, s)}
                                         showLabels

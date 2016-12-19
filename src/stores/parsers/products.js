@@ -61,6 +61,12 @@ function parseVariants(product) {
     };
 }
 
+function parseImages(product) {
+    return {
+        images: map(product.images, v => ({ url: v.file && v.file.url }))
+    };
+}
+
 function parseProduct(product, { parseRecommended = false } = {}) {
     let newProduct = omit(product, ['options', 'recommended_products', 'variants']);
 
@@ -68,7 +74,7 @@ function parseProduct(product, { parseRecommended = false } = {}) {
         newProduct.recommendedProducts = getRecommendedProducts(product);
     }
 
-    newProduct = { ...newProduct, ...parseOptions(product), ...parseVariants(product) };
+    newProduct = { ...newProduct, ...parseOptions(product), ...parseVariants(product), ...parseImages(product) };
 
     return newProduct;
 }

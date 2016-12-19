@@ -121,7 +121,7 @@
     position: relative;
 }
 
-.spanStyle {
+.nonEditable {
     border: none;
     background-color: transparent;
     cursor: default;
@@ -139,10 +139,5 @@
 .disabled {
     color: $gray-color;
     border: 1px solid transparent;
-
-    &:focus,
-    &:active,
-    &:hover {
-        background-color: $white-color;
-    }
+    background-color: $gray-extra-light-color;
 }
