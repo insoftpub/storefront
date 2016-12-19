@@ -35,7 +35,7 @@ function CheckoutSuccess() {
             <article className={s.text}>
                 <header className={s.header}>Thank you for your purchase!</header>
                 <div>
-                    Your order has been accepted.
+                    Your order is accepted.
                     <br />
                     We'll call you to clarify the delivery time.
                 </div>

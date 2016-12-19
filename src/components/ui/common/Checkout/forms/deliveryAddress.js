@@ -23,10 +23,10 @@
  */
 
 import { deliveryRegions } from '../../../../../config';
-import { isEmpty, map } from 'lodash';
+import { isEmpty } from 'lodash';
 
 const
-    regions = map(deliveryRegions, item => ({
+    regions = deliveryRegions.map(item => ({
         name: item,
         key: item,
         selectable: true
@@ -72,21 +72,21 @@ export default component => {
             required: true
         }
     }, {
-        name: 'shipping.address1',
+        name: 'address1',
         title: 'Address',
         validators: {
             required: true
         },
         value: user['shipping']['address1']
     }, {
-        name: 'shipping.state',
+        name: 'state',
         type: 'select',
         title: 'Region',
         options: regions,
         defaultValue: 'region1',
         value: user['shipping']['state']
     }, {
-        name: 'shipping.city',
+        name: 'city',
         title: 'City',
         value: user['shipping']['city']
     }, {

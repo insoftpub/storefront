@@ -56,7 +56,8 @@ class Input extends Component {
         ]),
         disabled: pt.bool,
         editable: pt.bool,
-        autoFocus: pt.bool
+        autoFocus: pt.bool,
+        nonEditable: pt.bool
     };
 
     static defaultProps = {
@@ -70,7 +71,8 @@ class Input extends Component {
         disabled: false,
         editable: true,
         defaultValue: '',
-        autoFocus: false
+        autoFocus: false,
+        nonEditable: false
     };
 
     constructor(props) {
@@ -101,10 +103,11 @@ class Input extends Component {
     render() {
         const { wrapperClassName, labelPosition, wide, showLabel, title,
             required, textAlign, className, invalid, editable, frame,
-            disabled, type, autoFocus, error, placeholder } = this.props;
+            disabled, nonEditable, type, autoFocus, error, placeholder } = this.props;
 
         return (
             <div
+                onClick={this.handleClick}
                 className={cx(s.root, wrapperClassName, {
                     [s.wide]: wide,
                     [s.leftLabelPosition]: labelPosition === 'left',
@@ -129,14 +132,12 @@ class Input extends Component {
                         className={cx(s.input, className, {
                             [s.blackFrame]: frame && !invalid,
                             [s.redFrame]: frame && invalid,
-                            [s.nonEditable]: !editable
+                            [s.spanStyle]: !editable
                         })}
                         type={type}
                         placeholder={placeholder || (showLabel ? '' : title)}
                         onChange={this.handleChange}
-                        onClick={this.handleClick}
-                        disabled={disabled}
-                        readOnly={!editable}
+                        disabled={nonEditable || !editable || disabled}
                         value={this.state.value}
                         autoFocus={autoFocus}
                     />

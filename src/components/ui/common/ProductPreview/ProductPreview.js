@@ -28,6 +28,7 @@ import Price from '../Price';
 import s from './ProductPreview.scss';
 import cx from 'classnames';
 import Image from '../Image';
+import Link from '../Link';
 import { head } from 'lodash';
 
 @withStyles(s)
@@ -45,11 +46,6 @@ class ProductPreview extends Component {
         product: {}
     };
 
-    handleProductClick = () => {
-        this.props.onClick && this.props.onClick(this.props.product.slug);
-        this.context.executeAction('navigate/to', { url: `/product/${this.props.product.slug}` });
-    };
-
     render() {
         const
             { product } = this.props,
@@ -57,22 +53,16 @@ class ProductPreview extends Component {
 
         return (
             <div className={s.root} id={`product-${product.slug}`}>
-                <div onClick={this.handleProductClick}>
+                <Link to={`/product/${this.props.product.slug}`}>
                     <Image src={frontImage && frontImage.url} />
-                </div>
+                </Link>
                 <header className={s.info}>
-                    <div
-                        onClick={this.handleProductClick}
-                        className={s.brand}
-                    >
-                        {product.manufacturer_name}
-                    </div>
-                    <div
-                        onClick={this.handleProductClick}
+                    <Link
+                        to={`/product/${this.props.product.slug}`}
+                        name={product.name}
                         className={s.title}
-                    >
-                        {product.name}
-                    </div>
+                    />
+
                     <Price
                         className={cx(s.smartAlign, s.price)}
                         amount={product.price}

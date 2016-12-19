@@ -43,7 +43,6 @@ class Select extends Component {
     static propTypes = {
         withIcon: pt.bool,
         onChange: pt.func,
-        onClick: pt.func,
         title: pt.string,
         placeholder: pt.string,
         showLabel: pt.bool,
@@ -99,9 +98,7 @@ class Select extends Component {
         }
     }
 
-    handleClick = event => {
-        this.props.onClick && this.props.onClick(event);
-
+    handleToggle = () => {
         if (this.props.editable) {
             this.setState({
                 collapsed: !this.state.collapsed
@@ -153,13 +150,13 @@ class Select extends Component {
 
         return (
             <div
-                onClick={this.handleClick}
                 className={cx(s.select, s.selectField, this.props.className, {
                     [s.frame]: frame,
                     [s.redFrame]: invalid,
-                    [s.nonEditable]: !editable,
+                    [s.spanStyle]: !editable,
                     [s.disabled]: !editable
                 })}
+                onClick={this.handleToggle}
             >
                 {options[index]
                     ? <div className={s.chosenName}>

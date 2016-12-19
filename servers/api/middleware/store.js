@@ -258,10 +258,7 @@ function store(server) {
             req.modelPath = req.path.replace('/api', '');
             req.interface = [
                 'email',
-                'facebook_id',
-                'first_name',
-                'phone',
-                'shipping'
+                'facebook_id'
             ];
 
             next();
@@ -312,13 +309,8 @@ function store(server) {
             req.interface = [
                 'account_id',
                 'cart_id',
-                'order_number',
-                'shipping',
-                'items',
-                'first_name',
-                'phone',
-                'email',
-                'comments'
+                'num',
+                'shipping'
             ];
             req.constParams = {
                 closed: 'false'

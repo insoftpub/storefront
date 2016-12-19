@@ -32,7 +32,7 @@ class Logger {
 
         console.log(`[${statusText}] [${new Date()}]
             method: ${req.method.toUpperCase()},
-            path: ${req.baseUrl + req.path},
+            path: ${req.path},
             params: ${JSON.stringify(params)},
             time: ${time / SEC_DELIMITER} ms`);
     }

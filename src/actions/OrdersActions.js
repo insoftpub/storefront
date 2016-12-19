@@ -26,45 +26,40 @@ import actionTypes from '../constants/actionTypes';
 import service from '../services/api';
 import Promise from 'bluebird';
 import { generateOrderNumber } from '../utils/orders';
-import { map, head } from 'lodash';
 
 export default {
-    create(context, {
-        user,
-        products,
-        cartId,
-        ...contactInfo
-    }) {
+    create(
+        context, {
+            user,
+            products,
+            cartId,
+            contactInfo: { state, address1, city, ...profileInfo }
+        }
+    ) {
         context.executeAction('progress/show', 'order-create');
-
         return service({
             path: '/orders',
             method: 'POST',
             params: {
                 account_id: user.id,
                 cart_id: cartId,
-                order_number: generateOrderNumber(),
-                items: map(products, product => ({ product_id: product.product_id })),
-                ...contactInfo
+                billing: user.billing,
+                items: products,
+                num: generateOrderNumber(),
+                shipping: {
+                    state,
+                    city,
+                    address1
+                },
+                ...profileInfo
             }
         })
-            .then(({ order_number, grand_total, shipment_price, sub_total }) => {
+            .then(data => {
                 const params = {
                     type: 'order',
                     data: {
-                        order_number,
-                        grand_total,
-                        sub_total,
-                        shipment_price,
-                        products: map(products, ({ product, price, variant }) => ({
-                            sku: product.sku,
-                            image: head(product.images),
-                            manufacturer_name: product.manufacturer_name || '',
-                            name: product.name,
-                            price,
-                            variant
-                        })),
-                        ...contactInfo
+                        ...data,
+                        products
                     }
                 };
 
@@ -73,7 +68,7 @@ export default {
 
                 return Promise.all([
                     context.executeAction('cart/delete', { id: cartId }),
-                    context.dispatch(actionTypes.ORDER_CREATE, { order_number, grand_total, sub_total, shipment_price })
+                    context.dispatch(actionTypes.ORDER_CREATE, data)
                 ]);
             })
             .finally(() => context.executeAction('progress/hide', 'order-create'));

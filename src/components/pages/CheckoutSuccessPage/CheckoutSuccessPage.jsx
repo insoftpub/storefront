@@ -29,7 +29,7 @@ import Container from '../../ui/common/Container';
 import Title from '../../ui/common/Title';
 import CheckoutSuccess from '../../ui/common/CheckoutSuccess';
 
-const title = 'Order has been accepted';
+const title = 'Order is accepted';
 
 @withStyles(s)
 class CheckoutSuccessPage extends Component {

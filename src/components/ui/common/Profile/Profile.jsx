@@ -51,15 +51,6 @@ class Profile extends Component {
         return { user };
     }
 
-    handleInputClick = event => {
-        const { isEditMode } = this.state;
-
-        if (!isEditMode) {
-            this.setState({ isEditMode: true });
-            event.target.focus();
-        }
-    };
-
     handleSubmitClick = values => {
         const { isEditMode } = this.state;
 

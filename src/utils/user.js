@@ -25,7 +25,7 @@
 export function userErrorsParser(error) {
     switch (error.code) {
     case 'UNIQUE':
-        return 'This e-mail address is already used';
+        return 'Данный email уже используется';
     default:
         return error.message;
     }

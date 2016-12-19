@@ -28,7 +28,7 @@ import fieldsMap from './fieldsMap';
 import s from './Form.scss';
 import cx from 'classnames';
 import validators from '../../../../utils/validators';
-import _, { forEach, find, isEmpty, isEqual, reduce } from 'lodash';
+import { forEach, find, isEmpty, isEqual, reduce } from 'lodash';
 
 @withStyles(s)
 class Form extends Component {
@@ -111,7 +111,7 @@ class Form extends Component {
             }
         });
 
-        this.props.onChange && this.props.onChange(this.normalize({ [fieldName]: value }));
+        this.props.onChange && this.props.onChange({ [fieldName]: value });
     }
 
     handleSubmit = event => {
@@ -121,39 +121,27 @@ class Form extends Component {
     };
 
     submit() {
-        let { values } = this.state;
+        const { values } = this.state;
 
         if (this.validateForm()) {
-            this.props.onSubmit && this.props.onSubmit(this.normalize(values));
+            this.props.onSubmit && this.props.onSubmit(values);
         } else {
             this.setState(this.state);
         }
     }
 
-    normalize(values) {
-        return reduce(values, (memo, value, key) => {
-            if (key.match(/\./g)) {
-                return _.set(memo, key, value);
-            } else {
-                memo[key] = value;
-
-                return memo;
-            }
-        }, {});
-    }
-
     setDefaultProps(itemsArray) {
         let
-            defaultValues = {},
+            defValues = {},
             items = itemsArray || this.props.items;
 
         items.map(field => {
             if (field.value) {
-                defaultValues[field.name] = field.value;
+                defValues[field.name] = field.value;
             }
         });
 
-        this.setState({ values: defaultValues });
+        this.setState({ values: defValues });
     }
 
     validateForm() {
@@ -198,7 +186,6 @@ class Form extends Component {
             };
 
         return React.createElement(FieldComponent, {
-            ...field,
             wide: true,
             invalid: !fieldValidation.isValid,
             error: fieldValidation.error,
@@ -206,8 +193,9 @@ class Form extends Component {
             onChange: value => this.handleInputChange(field.name, value),
             showLabel: this.props.showLabels,
             labelPosition: this.props.labelsPosition,
-            editable: this.props.editable && !field.editable,
-            defaultValue: this.state.values[field.name] || field.defaultValue || ''
+            editable: this.props.editable && !field.nonEditable,
+            defaultValue: this.state.values[field.name],
+            ...field
         });
     }
 

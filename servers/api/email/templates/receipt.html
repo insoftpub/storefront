@@ -52,7 +52,7 @@
                     <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;">
                         <tr>
                             <td class="inner contents" style="padding-top:10px;padding-right:10px;padding-left:10px;width:100%;text-align:left;">
-                                <p style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;"><font class="colored">Invoice #</font> {{order_number}}</p>
+                                <p style="Margin:0;letter-spacing: -1px;font-size:18px;font-weight:600;"><font class="colored">Invoice #</font> {{number}}</p>
                             </td>
                         </tr>
                         <tr>
@@ -131,16 +131,16 @@
                         {{#each products}}
                         <tr>
                             <td style="width:30%;border-bottom:solid 1px #649ed4;">
-                                <img src="{{this.image.url}}" alt="Icon" style="max-width:100%;" />
+                                <img src="{{this.product.image}}" alt="Icon" style="max-width:100%;" />
                             </td>
                             <td style="width:25%;border-bottom:solid 1px #649ed4;">
                                 <table class="contents" style="border-spacing:0;font-family:sans-serif;color:#333333;width:100%;font-size:16px;text-align:left;">
-                                    <tr><td><span>{{this.manufacturer_name}}</span></td></tr>
-                                    <tr><td><span>{{this.name}}</span></td></tr>
+                                    <tr><td><span>{{this.product.manufacturer_name}}</span></td></tr>
+                                    <tr><td><span>{{this.product.name}}</span></td></tr>
                                 </table>
                             </td>
                             <td style="width:25%;border-bottom:solid 1px #649ed4;">
-                                {{this.sku}}
+                                {{this.product.sku}}
                             </td>
                             <td style="width:10%;border-bottom:solid 1px #649ed4;">
                                 {{this.variant.name}}

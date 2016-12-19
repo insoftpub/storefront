@@ -23,18 +23,14 @@
  */
 
 import templates from '../email';
-import { statusCodes } from '../../constants';
 import pdf from 'html-pdf';
 import sendEmail from './email.js';
 import moment from 'moment';
-import Logger from '../Logger';
 import { aws } from '../config';
 
-const
-    options = {
-        format: 'Letter'
-    },
-    logger = new Logger();
+const options = {
+    format: 'Letter'
+};
 
 function invoice(req, res) {
     const
@@ -47,13 +43,6 @@ function invoice(req, res) {
         },
         invoiceHtml = invoiceTemplate(modifiedData),
         receiptHtml = receiptTemplate(modifiedData);
-
-    logger.add({
-        req,
-        params: req.body,
-        statusCode: statusCodes.OK,
-        time: 0
-    });
 
     pdf
         .create(invoiceHtml, options)
