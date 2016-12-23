@@ -114,16 +114,16 @@ class Product extends Component {
             { state } = this.optionsRef,
             ids = map(state, option => option.id),
             { product } = this.state,
-            variantId = find(product.variants,
+            variant = find(product.variants,
                 ({ option_value_ids }) => reduce(ids,
                     (memo, id) => memo && includes(option_value_ids, id),
-                    true)).id;
+                    true));
 
         this.getCart()
                 .then(data => this.context.executeAction('cart/addProduct', {
                     id: data.id,
                     product,
-                    variant_id: variantId
+                    variant_id: variant && variant.id
                 }))
                 .then(() => this.setState({ showProceedToCheckoutLink: true }));
     };
