@@ -55,7 +55,7 @@ const CartProduct = ({
             <div className={s.name}>
                 {product.name}
             </div>
-            <div className={s.variant}>Color {item.variant.name}</div>
+            {item.variant && <div className={s.variant}>Color {item.variant.name}</div>}
             {showPrice && <Price
                 className={s.price}
                 amount={product.price}
@@ -69,7 +69,7 @@ const CartProduct = ({
                 cartActionParams={{
                     cart_id: cartId,
                     product_id: item.product.id,
-                    variant_id: item.variant.id
+                    variant_id: item.variant && item.variant.id
                 }}
             />}
         </div>
