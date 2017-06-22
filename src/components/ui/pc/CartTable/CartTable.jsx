@@ -89,7 +89,7 @@ class CartTable extends Component {
                                 cartActionParams={{
                                     cart_id: this.props.cartId,
                                     product_id: cartItem.product.id,
-                                    variant_id: cartItem.variant.id
+                                    variant_id: cartItem.variant && cartItem.variant.id
                                 }}
                             />
                             <Price
