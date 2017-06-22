@@ -24,5 +24,6 @@
 
 export const CURRENCY_SIGN = {
     RUB: 'РУБ',
+    EUR: '€',
     USD: '$'
 };
